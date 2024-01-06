@@ -13,7 +13,6 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v3
-
     - name: Set Up Google Auth
       uses: 'google-github-actions/auth@v2'
         with:
