@@ -14,6 +14,8 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v3
 
-    - name: Set Up Google Cloud SDK
-    # - name: Build the Docker image
-    #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Set Up Google Auth
+      uses: 'google-github-actions/auth@v2'
+        with:
+          project_id: 'cloud-devops-viking-test-area'
+          workload_identity_provider: 'projects/1025514410896/locations/global/workloadIdentityPools/drpandamd-gh/providers/python-tornado-ghactions' 
