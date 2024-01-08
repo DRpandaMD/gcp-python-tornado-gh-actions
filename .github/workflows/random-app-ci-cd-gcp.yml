@@ -14,6 +14,7 @@ jobs:
       id-token: 'write'
       
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout Code
       uses: 'actions/checkout@v3'
@@ -23,3 +24,9 @@ jobs:
       with:
         project_id: 'cloud-devops-viking-test-area'
         workload_identity_provider: 'projects/1025514410896/locations/global/workloadIdentityPools/drpandamd-gh/providers/python-tornado-ghactions' 
+
+    - name: Set Up Google Cloud SDK
+      uses: 'google-github-actions/setup-gcloud@v2'
+
+    - name: Use gcloud cli 
+      run: 'gcloud info'
