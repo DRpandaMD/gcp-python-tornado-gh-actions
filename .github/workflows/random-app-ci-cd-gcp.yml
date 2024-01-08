@@ -36,5 +36,5 @@ jobs:
 
     - name: Docker Build and Push
       run: |
-        docker build -t us-central1-docker.pkg.dev/cloud-devops-viking-test-area/random-app-gh-actions/random-app:$GITHUB_SHA .
+        docker build -t us-central1-docker.pkg.dev/cloud-devops-viking-test-area/random-app-gh-actions/random-app:$GITHUB_SHA ./random-app
         docker push us-central1-docker.pkg.dev/cloud-devops-viking-test-area/random-app-gh-actions/random-app:$GITHUB_SHA
