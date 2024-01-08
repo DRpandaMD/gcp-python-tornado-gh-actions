@@ -30,3 +30,6 @@ jobs:
 
     - name: Use gcloud cli 
       run: 'gcloud info'
+
+    - name: Configure Docker to use the gcloud cli
+      run: 'gcloud auth configure-docker'
